@@ -11,14 +11,14 @@ using Npgsql;
 
 namespace ProyectoBO
 {
-    public class UsuarioBo 
+    public class UsuarioBo
     {
 
         private UsuarioDao udao;
         public UsuarioBo()
         {
-             udao = new UsuarioDao();
-            conexion con = new conexion();
+            udao = new UsuarioDao();
+           
         }
 
         private Boolean validarUsuario(Usuario u)
@@ -47,13 +47,54 @@ namespace ProyectoBO
             }
 
             return true;
-            
+
         }
 
-    private Boolean verificarContrasena(Usuario u)
+        private Boolean Registrar(Usuario u, string registrar)
         {
-            return true;
+            try
+            {
+                if (!validarContrasena(u))
+                {
+                    //Console.Write("Usuario Registrado");
+                    throw new Exception("Usuario Registrado");
+                }
+
+                if (!validarContrasena(u))
+                {
+                    throw new Exception("Contraseña Invalida");
+
+
+                }
+
+                return udao.insertar(u);
+            }
+            catch (Exception)
+            {
+
+                throw new Exception("Problemas para insertar Usuario");
+
+            }
+
         }
-    
+
+        public Boolean autentificar(Usuario u)
+        {
+            if (!validarUsuario(u))
+             {
+                Console.Write("Usuario Requerido");
+             }
+
+            if (!validarContrasena(u))
+            {
+                Console.Write("Contraseña Invalida");
+            }
+
+            return udao.
+            }
+        }
     }
-}
+
+
+    
+

@@ -11,6 +11,11 @@ namespace Entidades
         int cedula { get; set; }
         string nombre { get; set; }
 
+
+        public persona()
+        {
+
+        }
         public persona(int cedula, string nombre)
         {
             this.cedula = cedula;
