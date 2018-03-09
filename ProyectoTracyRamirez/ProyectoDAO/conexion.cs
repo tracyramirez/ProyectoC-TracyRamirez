@@ -70,5 +70,14 @@ namespace ProyectoDAO
             conexion.Close();
 
         }
+
+        public void AgregarHotel(int id, int precio)
+        {
+            conexiones();
+            conexion.Open();
+            cmd = new NpgsqlCommand("INSERT INTO hotel (id,precio) VALUES ('" + id + "','" + precio + "')", conexion);
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
     }
 }

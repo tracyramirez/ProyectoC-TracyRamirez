@@ -100,6 +100,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Hotel";
             this.Text = "Hotel";
+            this.Load += new System.EventHandler(this.Hotel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataHotel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

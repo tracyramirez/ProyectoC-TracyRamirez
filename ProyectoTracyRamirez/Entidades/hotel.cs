@@ -40,7 +40,7 @@ namespace Entidades
         {
             this.id = id;
             this.precio = precio;
-            con.AgregarLugar(id, precio);
+            con.AgregarHotel(id, precio);
         }
 
         public void tbHotel(DataGridView AgregarHotel)
