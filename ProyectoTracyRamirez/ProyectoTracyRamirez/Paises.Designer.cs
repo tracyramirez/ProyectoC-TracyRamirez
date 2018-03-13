@@ -34,6 +34,7 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dataPais = new System.Windows.Forms.DataGridView();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataPais)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(308, 171);
+            this.btnRegistrar.Location = new System.Drawing.Point(370, 184);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btnRegistrar.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(158, 62);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.Size = new System.Drawing.Size(129, 20);
             this.txtId.TabIndex = 3;
             this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
@@ -79,7 +80,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(158, 120);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(129, 20);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
@@ -92,11 +93,22 @@
             this.dataPais.TabIndex = 5;
             this.dataPais.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPais_CellContentClick);
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(370, 247);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.TabIndex = 6;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click_1);
+            // 
             // Paises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 439);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.dataPais);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtId);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DataGridView dataPais;
+        private System.Windows.Forms.Button btnModificar;
     }
 }

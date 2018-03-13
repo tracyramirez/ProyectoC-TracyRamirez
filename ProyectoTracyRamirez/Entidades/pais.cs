@@ -41,8 +41,15 @@ namespace Entidades
             this.id = id;
             this.nombre = nombre;
             con.AgregarPais(id, nombre);
+            con.ModificarPais( nombre);
+
         }
-       
+
+        public void ModiPais( string nombre)
+        {
+            this.nombre = nombre;
+
+        }
         public void tbPais(DataGridView AgregarPais )
         {
             try

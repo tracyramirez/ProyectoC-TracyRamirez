@@ -41,7 +41,9 @@ namespace ProyectoTracyRamirez
             MessageBox.Show("Se ha insertado el registro correctamente.");
             
             pais.paisS(id, nombre);
-           
+            pais.tbPais(dataPais);
+           // pais.ModiPais(id, nombre);
+
 
 
         }
@@ -69,6 +71,16 @@ namespace ProyectoTracyRamirez
         private void label1_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnModificar_Click_1(object sender, EventArgs e)
+        {   string nombre = txtNombre.Text;
+            pais.ModiPais( nombre);
         }
     }
 }

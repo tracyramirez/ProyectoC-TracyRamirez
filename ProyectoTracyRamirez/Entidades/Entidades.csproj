@@ -49,7 +49,6 @@
     <Compile Include="hotel.cs" />
     <Compile Include="lugar.cs" />
     <Compile Include="pais.cs" />
-    <Compile Include="persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ruta.cs" />
     <Compile Include="Usuario.cs" />

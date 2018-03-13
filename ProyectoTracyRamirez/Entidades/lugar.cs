@@ -50,7 +50,7 @@ namespace Entidades
                 conexiones();
                 conexion.Open();
                 DataSet dataSe = new DataSet();
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT id_lugar,nombre FROM lugar", conexion);
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter("SELECT id_lugar,nombre FROM lugar ORDER BY nombre", conexion);
                 adapter.Fill(dataSe, "lugar");
                 Agregarlugar.DataSource = dataSe.Tables[0];
                 Agregarlugar.Columns[0].HeaderCell.Value = "Identificador";
